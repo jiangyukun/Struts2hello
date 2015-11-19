@@ -1,5 +1,6 @@
 package com.springtest1.biz;
 
+import java.io.Serializable;
 import java.util.List;
 
 import com.hibtest1.entity.Goods;
@@ -10,10 +11,14 @@ public class GoodsBizImpl implements GoodsBiz{
 	public void setGoodsDAO(GoodsDAO goodsDAO){
 		this.goodsDAO=goodsDAO;
 	}
-	public List getGoodsList(){
-		Goods goods=new Goods();
-		List list=goodsDAO.search(goods);
+	public List getGoodsList(Goods condition){
+		 
+		List list=goodsDAO.search(condition);
 		return list;
+	}
+	
+	public Serializable add(Goods condition){
+		return goodsDAO.add(condition);
 	}
 
 }

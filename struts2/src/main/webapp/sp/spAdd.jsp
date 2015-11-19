@@ -8,6 +8,34 @@
 <title>Insert title here</title>
 </head>
 <body>
+  <s:form action="addGoods" validate="true">
+		<table id="advSearch" width="380" height="66">
+		
+				<h1>添加商品</h1>
+			</div>
+			<tr>
+				<td><s:textfield label="商品名称" name="goods.goodsName" /></td>
+			</tr>
+			<tr>
+				<td><s:password label="商品后台名称" name="goods。goodsBackName" /></td>
+			</tr>
+			<tr>
+				<td><s:password label="参考价值" name="goods.value" /></td>
+			</tr>		
+			<tr>
+				<td><s:submit align="left" value="submit" /></td>
+				
+			</tr>
+			<tr>
+				<td></td>
+				<td>${requestScope.yesWords}</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>${requestScope.noWords}</td>
+			</tr>
+		</table>
 
+	</s:form>
 </body>
 </html>
